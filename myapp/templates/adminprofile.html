@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <!-- META -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- TITLE -->
+        <title>Strife-Admin Profile</title>
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "style-responsive.css" %}" rel="stylesheet" type="text/css" media="screen" />
+        <link href="{% static "css/font-awesome.css" %}" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static "css/libs/animate.css" %}">
+
+
+        <!-- bxSlider CSS file -->
+        <link href="{% static "css/jquery.bxslider.css" %}" rel="stylesheet" />
+
+
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="{% static "layerslider/css/layerslider.css" %}" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="{% static "layerslider/js/jquery.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/greensock.js" %}" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="{% static "layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
+
+        <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+
+
+        <!-- bxSlider Javascript file -->
+        <script src="{% static "js/jquery.bxslider.js" %}"></script>
+        <script>
+        $(document).ready(function(){
+        $('.bxslider').bxSlider({
+
+                                pager: false,
+                                controls: true,
+                                auto: true
+
+
+                                });
+        });
+        </script>
+
+
+
+        <link rel="stylesheet" type="text/css" href="{% static "lightbox/jquery.fancybox.css" %}" media="screen" />
+        <script src="{% static "lightbox/jquery.fancybox.js" %}"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+
+                    $('.fancybox').fancybox();
+
+                });
+        </script>
+
+
+        <!-- GOTO TOP JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#gotop').fadeIn();
+                } else {
+                    $('#gotop').fadeOut();
+                }
+            });
+
+            $('#gotop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });
+        });
+        </script>
+
+
+
+        <!-- HEADER JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 200) {
+                    $('.header').addClass("header_fix");
+                } else {
+                   $('.header').removeClass("header_fix");
+                }
+            });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+        if($(window).width() <= 900){
+        $(document).ready(function() {
+
+
+
+                    $('.mobile .title').click(function() {
+
+                                                $(this).next("ul").slideToggle();
+                                                $(this).toggleClass("minus");
+
+                                                });
+
+
+
+                });
+
+        }
+        </script>
+
+</head>
+
+<body>
+
+
+
+        <div class="header">
+        <div class="container">
+
+        			<a href="#" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
+
+                    <div class="nav mobile">
+                    <div class="title">Menu <span class="fa "></span></div>
+                    <ul>
+                    <li><a href="/strife/adminlogin/checklogin/deactivecomp/">DEACTIVE COMPETITIONS</a></li>
+                    <li><a href="/strife/adminlogin/checklogin/activecomp/">ACTIVE COMPETITIONS</a></li>
+                    <li><a href="#comp">ADD COMPETITON</a></li>
+                    <li><a href="/strife/">LOGOUT</a></li>
+                    </ul>
+                    </div>
+
+        </div>
+        </div>-->
+        <div class="feature_section">
+        <div class="container">
+
+
+                        <div class="leftside">
+                        <img src="{% static "images/thumbs/profile.png" %}" alt=""  class="wow bounceInLeft animated" data-wow-duration="2s" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+
+
+                        <div class="rightside">
+                        <h2>Admin Profile</h2>
+
+                    <div class="form-textbox">
+                        Institute Name:<br>&nbsp&nbsp&nbsp&nbsp{{ name|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Admin Name:<br>&nbsp&nbsp&nbsp&nbsp{{ admin|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Admin Designation:<br>&nbsp&nbsp&nbsp&nbsp{{ post|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Email ID:<br>&nbsp&nbsp&nbsp&nbsp{{ email|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Mobile:<br>&nbsp&nbsp&nbsp&nbsp{{ mobile|safe }}
+                    </div>
+                    <br clear="all" />
+
+                        <a href="/strife/adminlogin/checklogin/resetpassword/" class="button3">Reset Password</a>
+                </div>
+             </div>
+          </div>
+        <div class="common_section" id="comp">
+        <div class="container">
+
+                    <h2>Conduct a Quiz</h2>
+                    <h4>start a new competition here</h4>
+
+
+                    <br clear="all" />
+
+
+                    <form method="POST" class="hpform" action="/strife/adminlogin/checklogin/startcompetition/">
+                    <input type="text" placeholder="Competition Name" name="compname" required>
+                    <input type="text" placeholder="Category for Competition" name="category" required>
+                    <textarea placeholder="About Competition" name="about"></textarea>
+                    <input type="text" placeholder="Enter Number of Question" name="noques" required>
+                    <input type="text" placeholder="Enter Marks Per Question" name="marksques" required>
+                    <input type="text" placeholder="Enter Maximum Marks" name="mm" required>
+                    <input type="text" placeholder="Enter Maximum Time (in Minutes)" name="time" required>
+                    <input type="password" placeholder="Enter Your Password" name="pass" required>
+                    <div class="form-textbox">
+                        <input type="submit" name="submit" id="submit" class="submit" value="PROCEED" />
+                    </div>
+                    </form>
+
+
+
+
+        </div>
+        </div>
+    <!-- JS -->
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+        <div class="common_section">
+        <div class="container">
+
+
+                    <a href="#" class="footer_logo"><img src="images/logo.png" alt="" /></a>
+
+                    <div class="copyright">Copyright 2016 All Right Reserved -
+                    <a href="#">www.strife.com</a>.</div>
+
+        </div>
+        </div>
+
+
+        </div><!--wrapper-->
+
+
+        <script>
+            jQuery("#layerslider").layerSlider({
+                responsive: false,
+                responsiveUnder: 1100,
+                layersContainer: 1100,
+                skin: 'fullwidth',
+                hoverPrevNext: false,
+                skinsPath: 'layerslider/skins/'
+            });
+
+
+        </script>
+
+        <script src="{% static "js/wow.js" %}"></script>
+        <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+        </script>
+
+        <script type="text/javascript">
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+
+        $(document).ready(function() {
+
+        if($(window).width() <= 1200){
+
+
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+
+
+
+        }
+
+        });
+
+
+        </script>
+
+
+{{ alert|safe }}
+</body>
+</html>

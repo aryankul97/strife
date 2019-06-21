@@ -1,0 +1,14 @@
+#code for sending email
+#in settings.py
+
+EMAIL_USE_TLS=True
+EMAIL_HOST='smtp.google.com'
+EMAIL_HOST_USER='xxxxx@gmail.com'
+EMAIL_HOST_PASSWORD='xxxxxxxxxxxx'
+EMAIL_PORT=587
+
+#in views.py
+
+maill="Message"
+emaill=EmailMessage('Subject',maill,to=[])
+emaill.send()

@@ -1,0 +1,15 @@
+Strife “go for it”, An organized even in which people try to win  some
+thing. Competition  is a  situation in which two or more  people or 
+Groups are trying to get something which not everyone can have …..
+Strife is an activity involving two or more firms , in which each firm 
+tries to get people to buy its own goods in preference to the other 
+firms goods. Strife is the rivalry between service with the goal of 
+achieving revenue.
+This is the web based application based on the latest web technology
+Python django. This application provides a plate form for the 
+Organization /institution to any competition online this website 
+Works automatically .In generates results automatically . It generates
+User id and password for the admin to login into there admin 
+account and control all the competition organize by them admin 
+have control like adding a competition adding question to the 
+Competition.     

@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <!-- META -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <!-- TITLE -->
+        <title>Strife-QUIZ</title>
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "style-responsive.css" %}" rel="stylesheet" type="text/css" media="screen" />
+        <link href="{% static "css/font-awesome.css" %}" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static "css/libs/animate.css" %}">
+
+
+		<!-- bxSlider CSS file -->
+        <link href="{% static "css/jquery.bxslider.css" %}" rel="stylesheet" />
+
+
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="{% static "layerslider/css/layerslider.css" %}" type="text/css">
+        <!-- Stopwatch stylesheet -->
+        <link rel="stylesheet" href="{% static "clock.css" %}" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="{% static "layerslider/js/jquery.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/greensock.js" %}" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="{% static "layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
+        
+        <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+        
+
+		<!-- bxSlider Javascript file -->
+        <script src="{% static "js/jquery.bxslider.js" %}"></script>
+        <script>
+		$(document).ready(function(){
+		$('.bxslider').bxSlider({
+								
+								pager: false,
+								controls: true,
+								auto: true
+								
+								
+								});
+		});
+		</script>
+
+
+
+		<link rel="stylesheet" type="text/css" href="{% static "lightbox/jquery.fancybox.css" %}" media="screen" />
+		<script src="{% static "lightbox/jquery.fancybox.js" %}"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+                                           
+                    $('.fancybox').fancybox();
+ 		
+                });
+        </script>
+
+
+        <!-- GOTO TOP JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#gotop').fadeIn();	
+                } else {
+                    $('#gotop').fadeOut();
+                }
+            });
+         
+            $('#gotop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });	
+        });
+        </script>
+            
+
+
+		<!-- HEADER JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 200) {
+                    $('.header').addClass("header_fix");	
+                } else {
+                   $('.header').removeClass("header_fix");
+                }
+            });	
+        });
+        </script>
+        
+        
+        <script type="text/javascript">
+        
+		if($(window).width() <= 900){
+		$(document).ready(function() {
+                                    
+									
+									
+                    $('.mobile .title').click(function() {
+												
+												$(this).next("ul").slideToggle();
+												$(this).toggleClass("minus");
+												
+												});
+					
+					
+ 		
+                });
+		
+		}
+        </script>
+                            
+</head>
+
+<body>
+        
+        
+    
+        <div class="header">
+        <div class="container">
+        
+        			<a href="/strife/" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
+                    
+                    <div class="nav mobile">
+                    <div class="title">Menu <span class="fa "></span></div>
+                    
+                    <ul>
+                    <!--Stopwatch Code-->
+        <li><div class="con">
+            <div class="timer">
+                <div class="cell">
+                    <div class="numbers tenminute movesix">0 1 2 3 4</div>
+                </div>
+                <div class="cell">
+                    <div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+                </div>
+                <div class="cell divider"><div class="numbers">:</div></div>
+                <div class="cell">
+                    <div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+                </div>
+                <div class="cell">
+                    <div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+                </div>
+                <div class="cell divider"><div class="numbers">:</div></div>
+                <div class="cell">
+                    <div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                </div>
+                <div class="cell">
+                    <div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                </div>
+                <div class="cell">
+                    <div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+                </div>
+            </div>
+        </div></li>
+        <li><a href="#" onclick="setTimeout(function() {
+        window.close();})">QUIT</a></li>
+                    </ul>
+                    </div>
+        
+        </div>
+        </div>
+
+        <div class="feature_section">
+        <div class="container">
+        
+                        
+                        <div class="leftside">
+                        <img src="{% static "images/thumbs/t1.png" %}" alt=""  class="wow bounceInLeft animated" data-wow-duration="2s" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+                        
+                        
+                        <div class="rightside">
+                        <h2>Candidate Profile</h2>
+                        
+                    <div class="form-textbox">
+                        Roll Number:<br>&nbsp&nbsp&nbsp&nbsp{{ roll|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Candidate Name:<br>&nbsp&nbsp&nbsp&nbsp{{ name|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Candidate Email:<br>&nbsp&nbsp&nbsp&nbsp{{ email|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Competition Registered For:<br>&nbsp&nbsp&nbsp&nbsp{{ comp|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Course:<br>&nbsp&nbsp&nbsp&nbsp{{ course|safe }}
+                    </div>
+                    <div class="form-textbox">
+                        <br>Branch/Field Of Study:<br>&nbsp&nbsp&nbsp&nbsp{{ branch|safe }}
+                    </div>
+                </div>
+             </div>
+          </div>
+        <div class="common_section" id="register">
+        <div class="container">
+        
+                    <h2>QUIZ HERE</h2>
+                    <h4>Best of Luck!</h4>
+                    
+                   
+                    <br clear="all" />
+                    
+                    
+                    <form method="POST" class="hpform" action="/strife/startquiz/checkcandidate/generateresult/">
+                    <!--<input type="text" name="ques1" id="quesid" value="{{ qid1 }}" readonly>
+                    <label for="agree-term" class="label-agree-term">{{ q1 }}</label><br>
+                    <input type="radio" name="option1" id="option" class="agree-term" value="A">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q1A }}</label><br>
+                    <input type="radio" name="option1" id="option" class="agree-term" value="B">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q1B }}</label><br>
+                    <input type="radio" name="option1" id="option" class="agree-term" value="C">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q1C }}</label><br>
+                    <input type="radio" name="option1" id="option" class="agree-term" value="D">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q1D }}</label><br><br>
+                    <input type="text" name="ques2" id="quesid" value="{{ qid2 }}" readonly>
+                    <label for="agree-term" class="label-agree-term">{{ q2 }}</label><br>
+                    <input type="radio" name="option2" id="option" class="agree-term" value="A">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q2A }}</label><br>
+                    <input type="radio" name="option2" id="option" class="agree-term" value="B">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q2B }}</label><br>
+                    <input type="radio" name="option2" id="option" class="agree-term" value="C">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q2C }}</label><br>
+                    <input type="radio" name="option2" id="option" class="agree-term" value="D">
+                        <label for="option" class="label-agree-term"><span><span></span></span>{{ q2D }}</label><br><br>
+                        <input type="text" name="ques3" id="quesid" value="{{ qid3 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 3 Here?</label><br>
+                    <input type="radio" name="option3" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option3" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option3" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option3" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques4" id="quesid" value="{{ qid4 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 4 Here?</label><br>
+                    <input type="radio" name="option4" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option4" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option4" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option4" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques5" id="quesid" value="{{ qid5 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 5 Here?</label><br>
+                    <input type="radio" name="option5" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option5" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option5" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option5" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques6" id="quesid" value="{{ qid6 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 6 Here?</label><br>
+                    <input type="radio" name="option6" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option6" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option6" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option6" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques7" id="quesid" value="{{ qid7 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 7 Here?</label><br>
+                    <input type="radio" name="option7" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option7" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option7" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option7" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques8" id="quesid" value="{{ qid8 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 8 Here?</label><br>
+                    <input type="radio" name="option8" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option8" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option8" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option8" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques9" id="quesid" value="{{ qid9 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 9 Here?</label><br>
+                    <input type="radio" name="option9" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option9" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option9" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option9" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques10" id="quesid" value="{{ qid10 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 10 Here?</label><br>
+                    <input type="radio" name="option10" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option10" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option10" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option10" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques11" id="quesid" value="{{ qid11 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 11 Here?</label><br>
+                    <input type="radio" name="option11" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option11" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option11" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option11" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques12" id="quesid" value="{{ qid12 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 12 Here?</label><br>
+                    <input type="radio" name="option12" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option12" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option12" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option12" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques13" id="quesid" value="{{ qid13 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 13 Here?</label><br>
+                    <input type="radio" name="option13" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option13" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option13" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option13" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques14" id="quesid" value="{{ qid14 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 14 Here?</label><br>
+                    <input type="radio" name="option14" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option14" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option14" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option14" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques15" id="quesid" value="{{ qid15 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 15 Here?</label><br>
+                    <input type="radio" name="option15" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option15" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option15" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option15" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques16" id="quesid" value="{{ qid16 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 16 Here?</label><br>
+                    <input type="radio" name="option16" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option16" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option16" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option16" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques17" id="quesid" value="{{ qid17 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 17 Here?</label><br>
+                    <input type="radio" name="option17" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option17" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option17" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option17" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques18" id="quesid" value="{{ qid18 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 18 Here?</label><br>
+                    <input type="radio" name="option18" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option18" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option18" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option18" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques19" id="quesid" value="{{ qid19 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 19 Here?</label><br>
+                    <input type="radio" name="option19" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option19" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option19" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option19" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>
+                        <input type="text" name="ques20" id="quesid" value="{{ qid20 }}" readonly>
+                        <label for="agree-term" class="label-agree-term">Question 20 Here?</label><br>
+                    <input type="radio" name="option20" id="option" class="agree-term" value="optionA">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option A</label><br>
+                    <input type="radio" name="option20" id="option" class="agree-term" value="optionB">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option B</label><br>
+                    <input type="radio" name="option20" id="option" class="agree-term" value="optionC">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option C</label><br>
+                    <input type="radio" name="option20" id="option" class="agree-term" value="optionD">
+                        <label for="option" class="label-agree-term"><span><span></span></span>Option D</label><br><br>-->
+                        {{ send|safe }}
+                    <br><input type="submit" name="submit" id="submit" class="submit" value="Submit" />
+                    </form>
+                    
+                   
+                    
+        
+        </div>
+        </div>
+        
+        <div class="common_section">
+        <div class="container">
+        
+        	
+            		<a href="#" class="footer_logo"><img src="images/logo.png" alt="" /></a>
+                   
+					<div class="copyright">Copyright 2016 All Right Reserved -
+                    <a href="#">www.strife.com</a>.</div>                    
+        
+        </div>
+        </div>
+        
+        
+        </div><!--wrapper-->
+
+
+		<script>
+            jQuery("#layerslider").layerSlider({
+                responsive: false,
+                responsiveUnder: 1100,
+                layersContainer: 1100,
+                skin: 'fullwidth',
+                hoverPrevNext: false,
+                skinsPath: 'layerslider/skins/'
+            });
+        
+        
+        </script>
+
+		<script src="{% static "js/wow.js" %}"></script>
+        <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+        </script>
+
+		<script type="text/javascript">
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+		$('html,body').animate({
+		scrollTop: target.offset().top - 132
+		}, 2000);
+		return false;
+		}
+		}
+		});
+		});
+        </script>
+        
+        
+		<script type="text/javascript">
+        
+        
+        $(document).ready(function() {
+        
+        if($(window).width() <= 1200){
+        
+        
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+        
+        
+        
+        }
+        
+        });
+        
+        
+        </script> 
+             
+
+<script type="text/javascript">
+    setTimeout(function() {
+        window.close();
+    }, {{ time|safe }});
+</script>		
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <!-- META -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- TITLE -->
+        <title>Strife</title>
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static "styleour.css" %}">
+        <!-- Main StyleSheet -->
+        <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link href="{% static "style.css" %}" rel="stylesheet" type="text/css" />
+        <link href="{% static "style-responsive.css" %}" rel="stylesheet" type="text/css" media="screen" />
+        <link href="{% static "css/font-awesome.css" %}" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="{% static "css/libs/animate.css" %}">
+
+
+        <!-- bxSlider CSS file -->
+        <link href="{% static "css/jquery.bxslider.css" %}" rel="stylesheet" />
+
+
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="{% static "layerslider/css/layerslider.css" %}" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="{% static "layerslider/js/jquery.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/greensock.js" %}" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="{% static "layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
+        <script src="{% static "layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
+
+        <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
+
+
+        <!-- bxSlider Javascript file -->
+        <script src="{% static "js/jquery.bxslider.js" %}"></script>
+        <script>
+        $(document).ready(function(){
+        $('.bxslider').bxSlider({
+
+                                pager: false,
+                                controls: true,
+                                auto: true
+
+
+                                });
+        });
+        </script>
+
+
+
+        <link rel="stylesheet" type="text/css" href="{% static "lightbox/jquery.fancybox.css" %}" media="screen" />
+        <script src="{% static "lightbox/jquery.fancybox.js" %}"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+
+                    $('.fancybox').fancybox();
+
+                });
+        </script>
+
+
+        <!-- GOTO TOP JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#gotop').fadeIn();
+                } else {
+                    $('#gotop').fadeOut();
+                }
+            });
+
+            $('#gotop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });
+        });
+        </script>
+
+
+
+        <!-- HEADER JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 200) {
+                    $('.header').addClass("header_fix");
+                } else {
+                   $('.header').removeClass("header_fix");
+                }
+            });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+        if($(window).width() <= 900){
+        $(document).ready(function() {
+
+
+
+                    $('.mobile .title').click(function() {
+
+                                                $(this).next("ul").slideToggle();
+                                                $(this).toggleClass("minus");
+
+                                                });
+
+
+
+                });
+
+        }
+        </script>
+
+</head>
+
+<body>
+
+
+
+        <div class="header">
+        <div class="container">
+
+                    <a href="/strife/" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
+
+                    <div class="nav mobile">
+                    <div class="title">Menu <span class="fa "></span></div>
+                    <ul>
+                    <li><a href="#ourteam">Our Team</a></li>
+                    <li><a href="#faqs_part">FAQs</a></li>
+                    <li><a href="#features">ABOUT US</a></li>
+                    <li><a href="#" onclick="window.open('/strife/startquiz/','Strife-Start Quiz','fullscreen=yes,scrollbars=yes'); return false">START QUIZ</a></li>
+                    <li><a href="/strife/adminlogin/">LOGIN HERE</a></li>
+                    <li><a href="#register">TAKE PART IN QUIZ</a></li>
+                    </ul>
+                    </div>
+
+        </div>
+        </div>
+
+
+
+
+        <div class="wrapper">
+        <div class="slider_main">
+        <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:473px;">
+
+
+                                <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+                                <img src="{% static "images/slider/slide-bg1.jpg" %}" class="ls-bg" alt="Slide background"/>
+
+
+
+                                <!--<iframe src="http://player.vimeo.com/video/34134308?portrait=0&amp;color=ff9933&autoplay=1" width="443" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+
+
+                                <div class="ls-l" style="top:140px;left:638px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l1">Impulse</h2>
+                                </div>
+
+                                <div class="ls-l" style="top:200px;left:583px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l2">An Aptitude Test. Organised by Strife.</h2>
+                                </div>
+
+
+
+                                <div class="ls-l" style="top:265px;left:598px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#impulse" class="button2">Learn More</a>
+                                </div>
+
+
+                                <div class="ls-l" style="top:265px;left:810px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#register" class="button1">REGISTER NOW</a>
+                                </div>
+
+
+                                </div>
+
+        </div>
+        </div>
+        <br clear="all" />
+        <a  href="/strife/adminlogin/newadmin/"><img src="{% static "images/slider/click.jpg" %}" class="ls-bg" alt="Slide background"></a>
+
+        <div class="feature_section" id="impulse">
+        <div class="container">
+
+
+                        <div class="leftside">
+                        <img src="{% static "images/thumbs/impulse.jpg" %}" alt=""  class="wow bounceInLeft animated" data-wow-duration="2s" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+
+
+                        <div class="rightside">
+                        <h2>IMPULSE</h2>
+                        <p>
+                        This is a online aptitude and reasoning test. In which we will ask you some questions related to your field of study and some general knowledge questions. This quiz helps you to check your aptitude and reasoning solving ability. And this will also help you to increase your problem solving ability. This test will help you to check your aptitude before appearing in the Interviews. The companies are also give extra marks for the aptitude certificate in you file. Having a aptitude certificate will bring a extra focus on your profile. So come on take part and check your aptitude here!
+                        </p>
+
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>This Event will be organised at</strong> <br />
+                        On this site i.e. www.strife.co.in
+                        </div>
+
+                        <br clear="all" />
+
+                        <a href="#register" class="button3">Register Here</a>
+                        </div>
+                        </div>
+                        </div>
+
+        </div>
+        </div>
+
+        <div class="common_section" id="register">
+        <div class="container">
+
+                    <h2>QUIZ REGISTRATION</h2>
+                    <h4>come on get started by registering with us.</h4>
+
+
+                    <br clear="all" />
+
+
+                    <form method="POST" id="candidate" class="hpform" action="/strife/register/">
+                    <input type="text" name="roll" placeholder="Roll Number/Mobile" required>
+                    <input type="text" name="name" placeholder="Candidate Name" required>
+                    <input type="email" name="email" placeholder="Candidate Email" required>
+                    <!--<select form="candidate" name="compname">
+                            <option value="Hello">Hello</option>
+                    </select>-->
+                    <label class="label-agree-term">Select Competition Name</label>
+                    {{ compname|safe }}
+                    <input type="text" name="course" placeholder="Course" required>
+                    <input type="text" name="bra" placeholder="Branch/Field Of Study" required>
+                    <input type="text" name="inst" id="inst" placeholder="Institute Name" required>
+                    <input type="submit" name="submit" id="submit" class="submit" value="REGISTER" />
+                    </form>
+
+
+
+
+        </div>
+        </div>
+
+        <div class="feature_section" id="features">
+        <div class="container">
+
+
+                        <div class="leftside">
+                        <img src="{% static "images/thumbs/strife.png" %}" alt=""  class="wow bounceInLeft animated" data-wow-duration="2s" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+
+
+                        <div class="rightside">
+                        <h2>About Us!</h2>
+                        <p>
+                        Strife “go for it”, which means "An organized event in which people try to win  something". Competition  is a  situation in which two or more  people or
+                        groups are trying to get something which not everyone can have. This is the web based application based on the latest web technology"Python Django". This application provides a plateform for the Organizations/Institutions or anyone who want to organize a online QUIZ, this website
+                        provide all the facilities like record management, result generation etc. all these features works automatically.It generates results automatically . It generates
+                        User id and password for the admin to login into there admin
+                        account and control all the competition organize by them. Admin
+                        have controls like adding a competition adding question to the
+                        Competition, active or deactive competition and others.
+
+                        </p>
+
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>For any query email us at</strong> <br/>
+                        Click the below button.
+                        </div>
+                        </div>
+
+                        <br clear="all" />
+
+                        <a href="#query" class="button3">CLICK HERE</a>
+                        </div>
+
+        </div>
+        </div>
+        <div class="feature_section ano_feature_section">
+        <div class="container">
+
+
+                        <div class="leftside">
+                        <h2>Our Service</h2>
+                        <p>
+                        We have created this platform for the one who would like to organize a quiz online. This platform gives you ability to manage results and other records. In website works for you and manage all your records automatically. You can also download results and other records.
+                        </p>
+
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>Organize a Quiz Now!!</strong> <br />
+                        </div>
+                        </div>
+
+                        </div>
+
+
+                        <div class="rightside">
+                        <img src="{% static "images/thumbs/t2.png" %}" alt="" class="wow bounceInRight animated imagethumb2" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+
+        </div>
+        </div>
+        <div class="pricing_table_section" id="pricing_part">
+        <div class="container">
+
+                    <h2>Subscribe to Us!</h2>
+                    <h4></h4>
+
+
+                    <div class="insider">
+
+
+                    <div class="block">
+                    <div class="head">
+                    <h2>Free</h2>
+                    <p>Free Subscription for<strong> 3 Months</strong></p>
+                    </div>
+                    <ul>
+                    <li>Total Competitions <span>2</span></li>
+                    <li>Automatic Result Management <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Database Protection <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Cloud Storage for Candidate Data <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>24/7 Customer Service <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li><h5>Free for 3 Months</h5><a href="/strife/adminlogin/newadmin/" class="button5">Subscribe</a></li>
+                    </ul>
+                    </div>
+
+
+                    <div class="block">
+                    <div class="head">
+                    <h2>Premium</h2>
+                    <p>Get Premium for <strong>1 Year</strong></p>
+                    </div>
+                    <ul>
+                    <li>Total Competitions <span>Unlimited</span></li>
+                    <li>Automatic Result Management <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Database Protection <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Cloud Storage for Candidate Data <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>24/7 Customer Service <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li><h5>Subscribe for 1 Year</h5><a href="/strife/premium/" class="button5">Subscribe</a></li>
+                    </ul>
+                    </div>
+
+
+        </div>
+        </div>
+        <div class="common_section" id="faqs_part">
+        <div class="container">
+
+                    <h2>Frequently Asked Questions</h2>
+                    <h4>One machine can do the work of fifty ordinary men. No machine can do the work of one extraordinary man</h4>
+
+                    <div class="faqbox">
+                    <div class="title">How admin can see the result?</div>
+                    <p>
+                        In your admin account, click on active competitions button and open your desired competition window then click on RESULTS button then the result of the competition will be appeared.
+                    </p>
+                    </div>
+
+
+                    <div class="faqbox longer">
+                    <div class="title">How to organize a competition?</div>
+                    <p>
+                    Open your admin account click on ADD COMPETITION button, then a competition form will appear fill all the details and submit the form. The competition will be added to active competitions screen.
+                    </p>
+                    </div>
+
+                    <div class="faqbox longer">
+                    <div class="title">How to create admin account?</div>
+                    <p>
+                    First when you open this application on the top right corner in the menu bar you will got a admin login button,click on that button then you will redirect to admin login page. There is a signup link provided, open that link and fill the form and submit it.
+                    </p>
+                    </div>
+
+
+
+
+                    <div class="faqbox">
+                    <div class="title">If I forgot my admin account password what can I do?</div>
+                    <p>
+                    Open admin login screen then click on forgot password link then new screen will be redirected enter your email and submit it. Then the server will automatically send your password to your email.
+                    </p>
+                    </div>
+
+
+                    <div class="faqbox longer">
+                    <div class="title">How a candidate can register?</div>
+                    <p>
+                    On the home screen click on register now button available on the top right corner in the menu bar. Then a candidate registration form will appear, fill all the details with the competition name you want to take part in.
+                    </p>
+                    </div>
+
+                    <div class="faqbox">
+                    <div class="title">What is the login id and examination password of the candidate?</div>
+                    <p>
+                    After succesful submission of candidate registration form the login id will automatically send to the candidate's email account and the examination password is the competition id which will be forwarded by the admin.
+                    </p>
+                    </div>
+
+        </div>
+        </div>
+        <div class="common_section" id="ourteam">
+        <div class="container">
+
+                    <h2>Our Team</h2>
+                    <h4>Working in a team is awesome</h4>
+                    <div class="blog-wrapper section-padding-100-0 clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Single Blog Area  -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area blog-style-2 mb-100">
+                        <div class="single-blog-thumbnail">
+                            <img src="{% static "img/blog-img/aryan.png" %}" alt="">
+                        </div>
+                        <!-- Blog Content -->
+                        <div class="single-blog-content mt-50">
+                            <div class="line"></div>
+                            <a href="#" class="post-tag">Team Leader and Back End Designer</a>
+                            <h4><a class="post-headline">Aryan Kulshreshtha</a></h4>
+                            <p>I am the student of B.Tech from Computer Science branch. I would love to develop desktop applications, web applications etc. And as a Team Leader its my first experience and it was really awesome.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog Area  -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area blog-style-2 mb-100">
+                        <div class="single-blog-thumbnail">
+                            <img src="{% static "img/blog-img/sonali.png" %}" alt="">
+                        </div>
+                        <!-- Blog Content -->
+                        <div class="single-blog-content mt-50">
+                            <div class="line"></div>
+                            <a href="#" class="post-tag">Front End Designer</a>
+                            <h4><a class="post-headline">Sonali Kulshreshtha</a></h4>
+                            <p>I am the student of B.tech form Computer Science branch. I have choosen graphic designing because I love to play with colors, pictures, animations etc. And it was really awesome working under my Team Leader.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Blog Area  -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-area blog-style-2 mb-100">
+                        <div class="single-blog-thumbnail">
+                            <img src="{% static "img/blog-img/kavita.png" %}" alt="">
+                        </div>
+                        <!-- Blog Content -->
+                        <div class="single-blog-content mt-50">
+                            <div class="line"></div>
+                            <a href="#" class="post-tag">Content Designer</a>
+                            <h4><a class="post-headline">Kavita Ahuja</a></h4>
+                            <p>I am the student of B.tech form Computer Science branch. And I love to write contents. So I have decided to work as a Content Designer under my Team Leader for the development of this Project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        </div>
+        </div>
+        <div class="feature_section ano_feature_section">
+        <div class="container">
+
+
+                        <div class="leftside">
+                        <h2>Thank You Sir!</h2>
+                        <p>
+                        We have developed this web application project under the guidence of Mr. Tajendar Arora. He is the one who gave us such knowledge, that now we are at the stage that we are able to develop any type of desktop application, web application or mobile application. Thank You so much Sir for being with us!
+                        </p>
+
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>Mr. Tajendar Arora</strong> <br />
+                        Java and Python Expert/Developer
+                        </div>
+                        </div>
+                        </div>
+
+
+                        <div class="rightside">
+                        <img src="{% static "img/blog-img/sir.png" %}" alt="" class="wow bounceInRight animated imagethumb2" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+
+        </div>
+        </div>
+        <div class="common_section" id="query">
+        <div class="container">
+
+                    <h2>Send Your Query Here</h2>
+
+
+                    <br clear="all" />
+
+
+                    <form method="POST" id="candidate" class="hpform" action="/strife/sendquery/">
+                    <input type="text" name="name" placeholder="Your Name" />
+                    <input type="email" name="email" placeholder="Your Email" />
+                    <textarea type="text" name="message" placeholder="Your Message" /></textarea>
+                    <input type="submit" name="submit" id="submit" class="submit" value="SEND" />
+                    </form>
+
+
+
+
+        </div>
+        </div>
+        <div class="common_section">
+        <div class="container">
+
+
+                    <a href="#" class="footer_logo"><img src="{% static "images/footer.png" %}" alt="" /></a>
+
+                    <div class="copyright">Copyright 2016 All Right Reserved -
+                    <a href="#">www.strife.com</a>.</div>
+
+        </div>
+        </div>
+
+
+        </div><!--wrapper-->
+
+
+        <script>
+            jQuery("#layerslider").layerSlider({
+                responsive: false,
+                responsiveUnder: 1100,
+                layersContainer: 1100,
+                skin: 'fullwidth',
+                hoverPrevNext: false,
+                skinsPath: 'layerslider/skins/'
+            });
+
+
+        </script>
+
+        <script src="{% static "js/wow.js" %}"></script>
+        <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+        </script>
+
+        <script type="text/javascript">
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+        </script>
+
+
+        <script type="text/javascript">
+
+
+        $(document).ready(function() {
+
+        if($(window).width() <= 1200){
+
+
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+
+
+
+        }
+
+        });
+
+
+        </script>
+
+
+
+{{ alert|safe }}
+</body>
+</html>
