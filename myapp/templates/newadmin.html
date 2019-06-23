@@ -6,7 +6,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <!-- TITLE -->
-        <title>Strife-Admin Login</title>
+        <title>Register Here to Organize Online Quiz Competition</title>
+        
+        <meta name="description" content="Strife is a powerful online test generator, that will automatically mark and calculate the result. Create and organize your online quiz, competition assesments for FREE. This website is absolutly free to organize online quiz competition. This is a online quiz creator. This tool is free online test creator for teachers, professors or anybody. You just need to register here!">
+        <meta name="keywords" content="free online test maker, online quiz competition, online quiz creator, online quiz to earn money, online quiz website, quiz website, online quiz maker, free online quiz maker multiple choice, free online assessment creator, test creator, free online test maker for teachers, easy test maker, Online test generator, online quiz maker, flexiquiz, test generator, quiz maker, exam builder, online quiz software, timed quiz maker, multiple choice quiz maker, exam creator">
+        <meta name="author" content="">
         {% load static %}
         <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
 
@@ -138,11 +142,48 @@
 
         </div>
         </div>
-        <div class="common_section" id="query">
+        <div class="slider_main">
+        <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:473px;">
+
+
+                                <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+                                <img src="{% static "images/slider/slide-bg3.jpg" %}" class="ls-bg" alt="Slide background"/>
+
+
+
+                                <!--<iframe src="http://player.vimeo.com/video/34134308?portrait=0&amp;color=ff9933&autoplay=1" width="443" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+
+
+                                <div class="ls-l" style="top:140px;left:638px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l1">Get a Free Trial</h2>
+                                </div>
+
+                                <div class="ls-l" style="top:200px;left:583px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l2">Organize Your Own Online Quiz Competition for Free.</h2>
+                                </div>
+
+
+
+                                <div class="ls-l" style="top:265px;left:598px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#pricing_part" class="button1">Learn More</a>
+                                </div>
+
+
+                                <div class="ls-l" style="top:265px;left:810px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#register" class="button1">Sign Up Here</a>
+                                </div>
+
+
+                                </div>
+        </div>
+        </div>
+
+        <div class="common_section" id="register">
         <div class="container">
 
-                    <h2>Admin Registration</h2>
-                    <h4>It is Confidential</h4>
+                    <h2>Register for Admin Account</h2>
+                    <h4>Sign Up here to organize a online quiz competition.</h4>
 
 
                     <br clear="all" />
@@ -153,9 +194,55 @@
                     <input type="text" name="adminpost" placeholder="Admin Designation" id="admin" required>
                     <input type="text" name="mobile" placeholder="Mobile Number" id="admin" required>
                     <input type="email" name="email" placeholder="Enter Email" id="email" required>
+                    <p>By clicking on signup button you are accepting our <a href="/strife/about-us/">Privacy Policy</a>.</p>
                     <input type="submit" name="submit" id="submit" class="submit" value="Sign Up" />
+
                 </form>
 
+
+
+        </div>
+        </div>
+        <div class="pricing_table_section" id="pricing_part">
+        <div class="container">
+
+                    <h2>Subscribe to Us!</h2>
+                    <h4></h4>
+
+
+                    <div class="insider">
+
+
+                    <div class="block">
+                    <div class="head">
+                    <h2>Free</h2>
+                    <p>Free Subscription for<strong> 3 Months</strong></p>
+                    </div>
+                    <ul>
+                    <li>Total Competitions <span>2</span></li>
+                    <li>Automatic Result Management <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Database Protection <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Cloud Storage for Candidate Data <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>24/7 Customer Service <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li><h5>Free for 3 Months</h5><a href="/strife/adminlogin/newadmin/" class="button5">Subscribe</a></li>
+                    </ul>
+                    </div>
+
+
+                    <div class="block">
+                    <div class="head">
+                    <h2>Premium</h2>
+                    <p>Get Premium for <strong>1 Year</strong></p>
+                    </div>
+                    <ul>
+                    <li>Total Competitions <span>Unlimited</span></li>
+                    <li>Automatic Result Management <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Database Protection <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>Cloud Storage for Candidate Data <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li>24/7 Customer Service <span><img src="{% static "images/icons/i8.png" %}" alt="" /></span></li>
+                    <li><h5>Subscribe for 1 Year</h5><a href="/strife/premium/" class="button5">Subscribe</a></li>
+                    </ul>
+                    </div>
 
 
         </div>
@@ -166,8 +253,9 @@
 
                     <a href="#" class="footer_logo"><img src="{% static "images/footer.png" %}" alt="" /></a>
 
-                    <div class="copyright">Copyright 2016 All Right Reserved -
-                    <a href="#">www.strife.com</a>.</div>
+                    <div class="copyright">Copyright 2019 -
+                    <a href="http://www.strife.co.in/">www.strife.co.in</a>.<br><br>Please read our 
+                    <a href="/about-us/">Privacy Policy</a>.</div>
 
         </div>
         </div>

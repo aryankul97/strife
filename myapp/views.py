@@ -66,7 +66,11 @@ def bout(request):
 	context={'compname':compname}
 	return render(request,'bout.html',context)
 def startquiz(request):
-	return render(request,'startquiz.html',{'alert':"Start Quiz Here!"})
+	return render(request,'startquiz.html',{})
+def about(request):
+	return render(request,'about.html',{'alert':"Start Quiz Here!"})
+def contact(request):
+	return render(request,'contact.html',{})
 def quiz(request):
 	return render(request,'quiz.html',{})
 def adminlogin(request):

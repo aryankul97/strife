@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bout),
     path('strife/', bout),
+    path('strife/about-us/', about),
+    path('strife/contact-us/', contact),
     path('strife/premium/', getpre),
     path('strife/premium/getpremium/', premium),
     path('strife/superadmin/', superadmin),

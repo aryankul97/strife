@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Strife-Admin Login</title>
-    {% load static %}
-    <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+        <!-- META -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <!-- TITLE -->
+        <title>Strife - Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Strife is a powerful online test generator, that will automatically mark and calculate the result. Create and organize your online quiz, competition assesments for FREE. This website is absolutly free to organize online quiz competition. This is a online quiz creator. This tool is free online test creator for teachers, professors or anybody. You just need to register here!">
+        <meta name="keywords" content="free online test maker, online quiz competition, online quiz creator, online quiz to earn money, online quiz website, quiz website, online quiz maker, free online quiz maker multiple choice, free online assessment creator, test creator, free online test maker for teachers, easy test maker, Online test generator, online quiz maker, flexiquiz, test generator, quiz maker, exam builder, online quiz software, timed quiz maker, multiple choice quiz maker, exam creator">
+        <meta name="author" content="">
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static "images/icons/sicon.ico" %}"/>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static "styleour.css" %}">
         <!-- Main StyleSheet -->
         <link rel="stylesheet" href="{% static "fonts/material-icon/css/material-design-iconic-font.min.css" %}">
 
@@ -31,21 +40,21 @@
         <!-- LayerSlider script files -->
         <script src="{% static "layerslider/js/layerslider.transitions.js" %}" type="text/javascript"></script>
         <script src="{% static "layerslider/js/layerslider.kreaturamedia.jquery.js" %}" type="text/javascript"></script>
-        
+
         <script src="{% static "js/bootstrap.min.js" %}" type="text/javascript"></script>
-        
+
 
         <!-- bxSlider Javascript file -->
         <script src="{% static "js/jquery.bxslider.js" %}"></script>
         <script>
         $(document).ready(function(){
         $('.bxslider').bxSlider({
-                                
+
                                 pager: false,
                                 controls: true,
                                 auto: true
-                                
-                                
+
+
                                 });
         });
         </script>
@@ -56,9 +65,9 @@
         <script src="{% static "lightbox/jquery.fancybox.js" %}"></script>
         <script type="text/javascript">
                 $(document).ready(function() {
-                                           
+
                     $('.fancybox').fancybox();
-        
+
                 });
         </script>
 
@@ -68,18 +77,18 @@
         $(function() {
             $(window).scroll(function() {
                 if($(this).scrollTop() != 0) {
-                    $('#gotop').fadeIn();   
+                    $('#gotop').fadeIn();
                 } else {
                     $('#gotop').fadeOut();
                 }
             });
-         
+
             $('#gotop').click(function() {
                 $('body,html').animate({scrollTop:0},800);
-            }); 
+            });
         });
         </script>
-            
+
 
 
         <!-- HEADER JQUERY -->
@@ -87,93 +96,90 @@
         $(function() {
             $(window).scroll(function() {
                 if($(this).scrollTop() >= 200) {
-                    $('.header').addClass("header_fix");    
+                    $('.header').addClass("header_fix");
                 } else {
                    $('.header').removeClass("header_fix");
                 }
-            }); 
+            });
         });
         </script>
-        
-        
+
+
         <script type="text/javascript">
-        
+
         if($(window).width() <= 900){
         $(document).ready(function() {
-                                    
-                                    
-                                    
+
+
+
                     $('.mobile .title').click(function() {
-                                                
+
                                                 $(this).next("ul").slideToggle();
                                                 $(this).toggleClass("minus");
-                                                
+
                                                 });
-                    
-                    
-        
+
+
+
                 });
-        
+
         }
         </script>
-    
+
 </head>
+
 <body>
-<div class="header">
+
+
+
+        <div class="header">
         <div class="container">
-        
-                    <a href="#" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
-                    
+
+                    <a href="/strife/" class="logo"><img src="{% static "images/home.png" %}" alt="" /></a>
+
                     <div class="nav mobile">
                     <div class="title">Menu <span class="fa "></span></div>
                     <ul>
-                        <li><a href="/strife/adminlogin/backlogin/">BACK</a></li>
+                    <li><a href="/strife/contact-us/">Contact Us</a></li>
+                    <li><a href="/strife/#pricing_part">Our Pricing</a></li>
+                    <li><a href="/strife/#faqs_part">FAQs</a></li>
+                    <li><a href="/strife/about-us/">ABOUT US</a></li>
+                    <li><a href="/strife/#" onclick="window.open('/strife/startquiz/','Strife-Start Quiz','fullscreen=yes,scrollbars=yes'); return false">START QUIZ</a></li>
+                    <li><a href="/strife/adminlogin/">LOGIN HERE</a></li>
+                    <li><a href="/strife/#register">TAKE PART IN QUIZ</a></li>
                     </ul>
                     </div>
-        
-        </div>
-        </div>-->
-    <div class="main">
 
+        </div>
+        </div>
+
+
+
+
+        <div class="wrapper">
+        <br clear="all" />
+        <div class="common_section" id="query">
         <div class="container">
-            <div class="sign-up-content">
-                <h2 class="form-title">Competitions Organised By You</h2>
-                <!--<form method="POST" class="signup-form" action="/strife/adminlogin/checklogin/">
-                    <div class="form-textbox">
-                        Competition ID<br>
-                        <input type="text" placeholder="Name" name="compid" id="name" readonly>
-                    </div>
 
-                    <div class="form-textbox">
-                        Competition Name<br>
-                        <input type="text" placeholder="Name" name="id" id="name" readonly>
-                    </div>
+                    <h2>Get in Touch</h2>
+                    <h4>Contact Us.....Send Your Query Here</h4>
 
-                    <div class="form-textbox">
-                        Category Name<br>
-                        <input type="text" placeholder="Category Name" name="pass" id="pass" readonly>
-                    </div>
-                    <div class="form-textbox">
-                        Start Date<br>
-                        <input type="text" placeholder="Start Date" name="pass" id="pass" readonly>
-                    </div>
-                    <div class="form-textbox">
-                        End Date<br>
-                        <input type="text" placeholder="End Date" name="pass" id="pass" readonly>
-                    </div>
-                    <div class="form-textbox">
-                        <input type="submit" name="submit" id="submit" class="submit" value="Proceed To Add Question" />
-                    </div>
-                </form><br>-->
-                {{ comp|safe }}
-            </div>
+
+                    <br clear="all" />
+
+
+                    <form method="POST" id="candidate" class="hpform" action="/strife/sendquery/">
+                    <input type="text" name="name" placeholder="Your Name" />
+                    <input type="email" name="email" placeholder="Your Email" />
+                    <textarea type="text" name="message" placeholder="Your Message" /></textarea>
+                    <input type="submit" name="submit" id="submit" class="submit" value="SEND" />
+                    </form>
+
+
+
+
         </div>
-
-    </div>
-
-        <!-- JS -->
-    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
-    <script src="{% static "js/main.js" %}"></script>
+        </div>
         <div class="common_section">
         <div class="container">
 
@@ -186,8 +192,8 @@
 
         </div>
         </div>
-        
-        
+
+
         </div><!--wrapper-->
 
 
@@ -200,8 +206,8 @@
                 hoverPrevNext: false,
                 skinsPath: 'layerslider/skins/'
             });
-        
-        
+
+
         </script>
 
         <script src="{% static "js/wow.js" %}"></script>
@@ -236,16 +242,16 @@
         });
         });
         </script>
-        
-        
+
+
         <script type="text/javascript">
-        
-        
+
+
         $(document).ready(function() {
-        
+
         if($(window).width() <= 1200){
-        
-        
+
+
         $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -260,17 +266,18 @@
         }
         });
         });
-        
-        
-        
+
+
+
         }
-        
+
         });
-        
-        
-        </script> 
-             
 
 
+        </script>
+
+
+
+{{ alert|safe }}
 </body>
 </html>
