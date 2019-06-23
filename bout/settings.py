@@ -25,7 +25,7 @@ SECRET_KEY = 'c2_8$ayg$^ijtlzbg%x@$-sp2z2u0if!#r9+s7to^7vsfl#%g7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['34.93.111.52','www.strife.co.in','strife.co.in']
 
 
 # Application definition
