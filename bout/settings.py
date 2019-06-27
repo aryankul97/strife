@@ -25,7 +25,8 @@ SECRET_KEY = 'c2_8$ayg$^ijtlzbg%x@$-sp2z2u0if!#r9+s7to^7vsfl#%g7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.93.111.52','www.strife.co.in','strife.co.in']
+ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['34.93.111.52','www.strife.co.in','strife.co.in']
 
 
 # Application definition
@@ -127,14 +128,10 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_HOST_USER='strifeapp99@gmail.com'
 EMAIL_HOST_PASSWORD='degjtuklyseeekpm'
 EMAIL_PORT=587
-
-PAYTM_MERCHANT_KEY = ""
-PAYTM_MERCHANT_ID = ""
-HOST_URL = "http://localhost:8080"
-PAYTM_CALLBACK_URL = "/paytm/response/"
-
-if DEBUG:
-    PAYTM_MERCHANT_KEY = "xxxx"
-    PAYTM_MERCHANT_ID = "xxxx"
-    PAYTM_WEBSITE = 'WEB_STAGING'
-    HOST_URL = 'http://localhost:8000'
+"""
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+"""
